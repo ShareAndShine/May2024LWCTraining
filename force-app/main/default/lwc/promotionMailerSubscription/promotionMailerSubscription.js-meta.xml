@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+      
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page_Layout</target>
+        <target>lightningCommunity__Theme_Layout</target>
+    </targets>
+
+    <!-- Expore public properties as design attributes-->
+    <!-- Configuring the design attributes -->
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="userId" type="String" default="" label="Set current user Id"/>
+            <property name="username" type="String" default="" label="Set current user name"/>            
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

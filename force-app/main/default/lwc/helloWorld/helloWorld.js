@@ -6,7 +6,7 @@ export default class HelloWorld extends LightningElement {
 
 
     //properties
-
+    title = 'Salesforce LWC';
     // methods
 }
 

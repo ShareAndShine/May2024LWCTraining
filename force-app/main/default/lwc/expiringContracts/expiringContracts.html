@@ -1,0 +1,23 @@
+<template>
+
+    <lightning-combobox name="Select Month" label="Select Month" value={selectedMonth} placeholder="Select Month" 
+    options={monthOptions} onchange={handleMonthChange} variant="label-hidden"></lightning-combobox>
+
+
+    <lightning-card title="Expiring Contracts">
+        <template if:true={lstExpiringContractsWithRedirection}>
+            <!-- For loop Directive-->
+            <template for:each={lstExpiringContractsWithRedirection} for:item="recContract">
+                <div class="slds-p-around_medium lgc-bg" key={recContract.Id}>
+                    <lightning-tile label={recContract.Account.Name} href={recContract.acchref}> 
+                        <p class="slds-truncate" title="Contract ID">Contract ID: {recContract.Id}</p>
+                        <p class="slds-truncate" title="Contract Start Date">Contract Start Date:
+                            {recContract.StartDate}</p>
+                        <p class="slds-truncate" title="Contract End  Date">Contract End Date: {recContract.EndDate}</p>
+                    </lightning-tile>
+                </div>
+            </template>
+        </template>
+
+    </lightning-card>
+</template>

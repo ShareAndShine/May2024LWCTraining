@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets> <!-- expose the component and make it accessible only in experience cloud page-->
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page_Layout</target>
+        <target>lightningCommunity__Theme_Layout</target>
+    </targets>
+
+    <!-- Use Target Configs to expose design properties of the component and use the same to receive data from experience
+    cloud pages -->
+    <!-- Configuring the design attributes -->
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="prod_id" type="String" default="{!Product.Details.id}" label="Placholder for product Id"/>
+    </targetConfig>
+    </targetConfigs>
+
+
+</LightningComponentBundle>

@@ -1,0 +1,56 @@
+<template>
+
+    <template if:true={IsOfferfound}>
+
+        <!-- If offers found show list of offers -->
+        <div class="slds-var-m-top_medium slds-m-bottom_x-large">
+            <!-- Offer 1 -->
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-tile label="Bank Offer" type="media">
+                    <lightning-icon slot="media" icon-name="standard:household"></lightning-icon>
+                    <p class="slds-truncate" title="7 Members">Upto ₹1,000.00 discount on select Credit Cards, select
+                        Debit
+                        CardsUpto ₹1,000.00 discount on select Credit Cards</p>
+                </lightning-tile>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-tile label="No Cost EMI" type="media">
+                    <lightning-icon slot="media" icon-name="standard:aggregation_policy"></lightning-icon>
+                    <p class="slds-truncate" title="emi">Upto ₹1,080.66 EMI interest savings on select Credit Cards</p>
+                </lightning-tile>
+            </div>
+
+
+            <!-- Offer 3 -->
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-tile label="Cash Back" type="media">
+                    <lightning-icon slot="media" icon-name="standard:activation_target"></lightning-icon>
+                    <p class="slds-truncate" title="cashback">₹2,500 welcome rewards with RuPay</p>
+                </lightning-tile>
+            </div>
+        </div>
+
+
+
+
+    </template>
+
+    <template if:false={IsOfferfound}>
+
+        <!-- Place holder to show 0 offers found-->
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <!-- With an icon -->
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-tile label="Offer found - 0" type="media">
+                    <lightning-icon slot="media" icon-name="standard:crypto_category_wallet_group"></lightning-icon>
+                    <p class="slds-truncate" title="message">No offers found</p>
+                </lightning-tile>
+            </div>
+        </div>
+
+
+    </template>
+
+</template>
